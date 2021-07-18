@@ -32,7 +32,7 @@
       <i-button plain circle icon="one-icon-child" type="info"></i-button>
       <i-button plain circle disabled icon="one-icon-child" type="danger"></i-button>
     </div> -->
-    <i-button type="primary" @click="open">打开</i-button>
+    <!-- <i-button type="primary" @click="open">打开</i-button>
     <i-dialog title="温馨提示" width="30%" :visible.sync="visible">
       <ul>
         <li>1</li>
@@ -43,10 +43,14 @@
         <i-button type="primary" @click="visible = false">确定</i-button>
         <i-button type="primary" @click="visible = false" plain>取消</i-button>
       </template>
-    </i-dialog>
+    </i-dialog> -->
     <!-- <i-dialog>
       <template #title><h2>这是标题</h2></template>
     </i-dialog> -->
+
+    <i-input placeholder="请输入内容" type="text" v-model="username" clearable/>
+    <i-input placeholder="请输入内容" type="password" v-model="password" show-password/>
+    {{username}}
   </div>
 </template>
 
@@ -54,7 +58,9 @@
 export default {
   data () {
     return {
-      visible: false
+      visible: false,
+      username: '',
+      password: ''
     }
   },
   methods: {
